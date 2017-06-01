@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://ccflower.github.io/2017/06/01/hexoBlog/index.html">
 <meta property="og:site_name" content="ccflower的博客">
 <meta property="og:description" content="前言  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。   本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。 背景开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。主要参照物是涛哥的博客。涛哥的博客写的简明清晰，欢迎大家关注。">
-<meta property="og:updated_time" content="2017-06-01T06:59:05.000Z">
+<meta property="og:updated_time" content="2017-06-01T07:03:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建个人Github Blog">
 <meta name="twitter:description" content="前言  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。   本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。 背景开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。主要参照物是涛哥的博客。涛哥的博客写的简明清晰，欢迎大家关注。">
@@ -205,9 +205,9 @@ $ hexo deploy
 <h3 id="二、备份博客到github"><a href="#二、备份博客到github" class="headerlink" title="二、备份博客到github"></a>二、备份博客到github</h3><p>Hexo部署在ccflower.github.io项目中，是已经编译过的项目文件。而博客的源文件，包括文档，图片，配置，甚至主题，需要自己新建项目备份。博主折腾过在同一个项目中通过不同的分支来管理源文件和部署文件，后来觉得有点混乱，目前也采取额外新建一个项目<a href="https://github.com/ccflower/blogBackup" target="_blank" rel="external">blogBackup</a>存放博客源文件。</p>
 <h3 id="三、主题配置"><a href="#三、主题配置" class="headerlink" title="三、主题配置"></a>三、主题配置</h3><p>目前博主采用<a href="litten.me">litten</a>开发的<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a>主题。具体主题如何配置改动后面再陆续补充。</p>
 <h3 id="四、配置个人域名"><a href="#四、配置个人域名" class="headerlink" title="四、配置个人域名"></a>四、配置个人域名</h3><p>对大部分人来说，ccflower.github.io这样一个域名指向自己的博客地址已经足够用了。博主因为不了解域名的配置，花4RMB买了一个<a href="ccflower.space">ccflower.space</a>的域名指向自己github的博客。时间久了具体步骤已经有点忘记了。下次重新折腾记得来补充。</p>
-<h3 id="五、利用blogBackup备份进行快速二次搭建"><a href="#五、利用blogBackup备份进行快速二次搭建" class="headerlink" title="五、利用blogBackup备份进行快速二次搭建"></a>五、利用blogBackup备份进行快速二次搭建</h3><p>如果换电脑，或者不小心搞残了自己本地的博客配置，这个步骤还是十分有用。</p>
+<h3 id="五、利用blogBackup备份进行快速二次搭建"><a href="#五、利用blogBackup备份进行快速二次搭建" class="headerlink" title="五、利用blogBackup备份进行快速二次搭建"></a>五、利用blogBackup备份进行快速二次搭建</h3><p>如果换电脑，或者不小心搞残了自己本地的博客配置，这个步骤将十分有用。</p>
 <h4 id="1-远程克隆项目"><a href="#1-远程克隆项目" class="headerlink" title="1. 远程克隆项目"></a>1. 远程克隆项目</h4><pre><code>git clone https://github.com/ccflower/blogBackup.git
-</code></pre><p>克隆完成后，将.git文件拷贝出来备份。后续hexo init步骤会删除这个文件导致，还不理解原因。</p>
+</code></pre><p>克隆完成后，将.git文件拷贝出来备份。后续hexo init步骤会删除这个文件，还不理解原因。</p>
 <h4 id="2-进入项目，安装hexo"><a href="#2-进入项目，安装hexo" class="headerlink" title="2. 进入项目，安装hexo"></a>2. 进入项目，安装hexo</h4><pre><code>npm install hexo --save
 </code></pre><h4 id="3-项目hexo初始化-安装依赖"><a href="#3-项目hexo初始化-安装依赖" class="headerlink" title="3. 项目hexo初始化,安装依赖"></a>3. 项目hexo初始化,安装依赖</h4><pre><code>hexo init
 npm install
@@ -221,7 +221,7 @@ hexo d
 git add 
 git commit -m &quot;...&quot;
 git push
-</code></pre><h3 id="六、小结"><a href="#六、小结" class="headerlink" title="六、小结"></a>六、小结</h3><p>使用Hexo搭建blog已经有一年多的时间，反复折腾过不少次。<br>踏过的坑，都是未来的经验。耐心总结梳理，对自己总会有所帮助。</p>
+</code></pre><h3 id="六、小结"><a href="#六、小结" class="headerlink" title="六、小结"></a>六、小结</h3><p>使用Hexo搭建blog已经有一年多的时间，反复折腾过不少次。<br>踏过的坑，都是未来的经验。耐心总结梳理，对自己总会有所帮助吧。</p>
 
       
 
