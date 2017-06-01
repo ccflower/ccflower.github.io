@@ -158,65 +158,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/01/hello-world/" class="archive-article-date">
-  	<time datetime="2017-06-01T03:00:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/01/hello-world/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-44amdLoader" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -224,7 +165,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/44amdLoader/">44. AMD模式以及define函数的理解</a>
+      <a class="article-title" href="/2017/06/01/44amdLoader/">AMD模式以及define函数的理解</a>
     </h1>
   
 
@@ -291,7 +232,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/45gitDirectives/">45. 常用Git指令</a>
+      <a class="article-title" href="/2017/06/01/45gitDirectives/">常用Git指令</a>
     </h1>
   
 
@@ -348,6 +289,70 @@
 
 
   
+    <article id="post-hexoBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/01/hexoBlog/">Hexo搭建个人Github Blog</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/01/hexoBlog/" class="archive-article-date">
+  	<time datetime="2017-06-01T02:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。</p>
+<p>  本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。</p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。<br>主要参照物是<a href="http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more" target="_blank" rel="external">涛哥的博客</a>。涛哥的博客写的简明清晰，欢迎大家关注。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tech</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/01/hexoBlog/">more >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-46markdownDirections" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -355,7 +360,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/46markdownDirections/">46. 常用MD编辑指令</a>
+      <a class="article-title" href="/2017/06/01/46markdownDirections/">常用MarkDown编辑指令</a>
     </h1>
   
 
@@ -398,133 +403,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/06/01/46markdownDirections/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hexoBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/hexoBlog/">Hexo部署博客及采用git branch管理源文件</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/01/hexoBlog/" class="archive-article-date">
-  	<time datetime="2017-06-01T02:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。</p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。<br>主要参照物是涛哥的博客啦（<a href="http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more）。" target="_blank" rel="external">http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more）。</a></p>
-<p>后来适逢我厂大规模换电脑。而那时候只觉得我的博客已经部署到Git上了，<br>愉快地删除了所有的源文件。</p>
-<p>然后领到新电脑，等再有时间来重新整理Hexo的时候，<br>又按照之前的步骤配置了一遍，等hexo deploy顺利执行完，刚准备舒口气，<br>刷新网页一看所有之前的内容都没有了（虽然本来就没啥）。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tech</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/01/hexoBlog/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-rex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/rex/">正则表达式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/01/rex/" class="archive-article-date">
-  	<time datetime="2017-06-01T02:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="常用正则表达"><a href="#常用正则表达" class="headerlink" title="常用正则表达"></a>常用正则表达</h3><p>test ssh pub</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tech</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/01/rex/">more >></a>
         </p>
       
 

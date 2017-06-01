@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ccflower.github.io">
-  <title>Hexo部署博客及采用git branch管理源文件 | ccflower的博客</title>
+  <title>Hexo搭建个人Github Blog | ccflower的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。 背景开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。主要参照物是涛哥的博客啦（http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more）。 后来适逢我厂大规模换电脑。而那时候只觉得我的博客已经部署到Git上了，">
+  <meta name="description" content="前言  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。   本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。 背景开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。主要参照物是涛哥的博客。涛哥的博客写的简明清晰，欢迎大家关注。">
 <meta name="keywords" content="tech">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo部署博客及采用git branch管理源文件">
+<meta property="og:title" content="Hexo搭建个人Github Blog">
 <meta property="og:url" content="http://ccflower.github.io/2017/06/01/hexoBlog/index.html">
 <meta property="og:site_name" content="ccflower的博客">
-<meta property="og:description" content="前言  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。 背景开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。主要参照物是涛哥的博客啦（http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more）。 后来适逢我厂大规模换电脑。而那时候只觉得我的博客已经部署到Git上了，">
-<meta property="og:updated_time" content="2017-06-01T02:57:32.000Z">
+<meta property="og:description" content="前言  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。   本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。 背景开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。主要参照物是涛哥的博客。涛哥的博客写的简明清晰，欢迎大家关注。">
+<meta property="og:updated_time" content="2017-06-01T06:01:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo部署博客及采用git branch管理源文件">
-<meta name="twitter:description" content="前言  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。 背景开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。主要参照物是涛哥的博客啦（http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more）。 后来适逢我厂大规模换电脑。而那时候只觉得我的博客已经部署到Git上了，">
+<meta name="twitter:title" content="Hexo搭建个人Github Blog">
+<meta name="twitter:description" content="前言  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。   本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。 背景开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。主要参照物是涛哥的博客。涛哥的博客写的简明清晰，欢迎大家关注。">
   
     <link rel="alternative" href="/atom.xml" title="ccflower的博客" type="application/atom+xml">
   
@@ -165,7 +165,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo部署博客及采用git branch管理源文件
+      Hexo搭建个人Github Blog
     </h1>
   
 
@@ -179,55 +179,49 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。</p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。<br>主要参照物是涛哥的博客啦（<a href="http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more）。" target="_blank" rel="external">http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more）。</a></p>
-<p>后来适逢我厂大规模换电脑。而那时候只觉得我的博客已经部署到Git上了，<br>愉快地删除了所有的源文件。</p>
-<p>然后领到新电脑，等再有时间来重新整理Hexo的时候，<br>又按照之前的步骤配置了一遍，等hexo deploy顺利执行完，刚准备舒口气，<br>刷新网页一看所有之前的内容都没有了（虽然本来就没啥）。</p>
+<p>  本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。</p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。<br>主要参照物是<a href="http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more" target="_blank" rel="external">涛哥的博客</a>。涛哥的博客写的简明清晰，欢迎大家关注。</p>
 <a id="more"></a>
-<p>如果不想开两个项目来管理一个博客，只有借助分支来管理源文件和部署的静态文件了。搜到了CrazyMilk的博客（<a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more）。" target="_blank" rel="external">http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more）。</a></p>
-<p>这篇文章对我很有启发。但是按照博主的步骤没有配置成功。原因在于每当执行hexo init后，clone的仓库的git的信息就丢失了。即使重新git init,并与远程仓库建立联系也遇到了很多问题。</p>
-<p>所以最后只好反其道行之，在Hexo部署都设置好之后，重新初始化git仓库。建立远程连接。设置默认分支Hexo。在Hexo分支上提交src文件。在master<br>分支上部署静态文件。具体步骤如下。</p>
-<h4 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h4><p>Hexo安装之前需要电脑上已经安装Node。<br>使用npm安装Hexo。</p>
+<h3 id="一、首次利用HEXO搭建blog"><a href="#一、首次利用HEXO搭建blog" class="headerlink" title="一、首次利用HEXO搭建blog"></a>一、首次利用HEXO搭建blog</h3><h5 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h5><p>Hexo安装之前需要电脑上已经安装Node。博主当前使用node版本为v6.10.3, 配套npm版本为3.10.10。<br>使用npm安装Hexo。</p>
 <pre><code>$ npm install -g hexo-cli
-</code></pre><h4 id="2-Hexo建站"><a href="#2-Hexo建站" class="headerlink" title="2. Hexo建站"></a>2. Hexo建站</h4><pre><code>$ hexo init
-</code></pre><p>注意， hexo init会初始化当前文件夹为hexo建站目录。可以用</p>
+</code></pre><h5 id="2-Hexo建站"><a href="#2-Hexo建站" class="headerlink" title="2. Hexo建站"></a>2. Hexo建站</h5><pre><code>$ hexo init
+</code></pre><p>注意， hexo init会初始化当前文件夹为hexo建站目录。可以用如下指令生成一个新的名为blogName的文件夹作为blog目录。</p>
 <pre><code>$ hexo init blogName
-</code></pre><p>生成一个新的名为blogName的文件夹作为blog目录。</p>
-<p>下载依赖。</p>
-<pre><code>$ npm install
-</code></pre><p>生成网站文件，启动服务。</p>
-<pre><code>$ hexo generate
+</code></pre><h4 id="3-下载依赖。"><a href="#3-下载依赖。" class="headerlink" title="3.下载依赖。"></a>3.下载依赖。</h4><pre><code>$ npm install
+</code></pre><h4 id="4-生成网站文件，启动服务。"><a href="#4-生成网站文件，启动服务。" class="headerlink" title="4. 生成网站文件，启动服务。"></a>4. 生成网站文件，启动服务。</h4><pre><code>$ hexo generate
 $ hexo server
 </code></pre><p>至此，本地可以通过<a href="http://localhost:4000/访问自动生成的博客。" target="_blank" rel="external">http://localhost:4000/访问自动生成的博客。</a></p>
-<h4 id="3-部署到github"><a href="#3-部署到github" class="headerlink" title="3. 部署到github"></a>3. 部署到github</h4><p>修改_config.yml文件。<br>安装部署插件。</p>
+<h4 id="5-部署到github"><a href="#5-部署到github" class="headerlink" title="5. 部署到github"></a>5. 部署到github</h4><p>修改_config.yml文件。</p>
+<h6 id="1-url-http-yoursite-com-改成-url-http-ABC123-github-io"><a href="#1-url-http-yoursite-com-改成-url-http-ABC123-github-io" class="headerlink" title="1)  url: http://yoursite.com 改成 url: http://ABC123.github.io"></a>1)  url: <a href="http://yoursite.com" target="_blank" rel="external">http://yoursite.com</a> 改成 url: <a href="http://ABC123.github.io" target="_blank" rel="external">http://ABC123.github.io</a></h6><h6 id="2-把最下面的部署内容修改成如下代码并保存退出。"><a href="#2-把最下面的部署内容修改成如下代码并保存退出。" class="headerlink" title="2) 把最下面的部署内容修改成如下代码并保存退出。"></a>2) 把最下面的部署内容修改成如下代码并保存退出。</h6><pre><code>deploy:
+    type: git
+    repository: https://github.com/Todd2010/Todd2010.github.io.git  //此处改成您的GitHub仓库地址
+    branch: master
+</code></pre><p>安装部署插件。</p>
 <pre><code>$ npm install hexo-deployer-git --save
 $ hexo clean
 $ hexo generate
 $ hexo deploy 
-</code></pre><p>至此，可通过yourProjectName.github.io访问博客。</p>
-<h4 id="4-新建Hexo分支，存储源文件"><a href="#4-新建Hexo分支，存储源文件" class="headerlink" title="4. 新建Hexo分支，存储源文件"></a>4. 新建Hexo分支，存储源文件</h4><p>初始化当前项目为一个git仓库。</p>
-<pre><code>$ git init
-</code></pre><p>与远程仓库建立联系</p>
-<pre><code>$ git remote add origin https://github.com/ccflower/ccflower.github.io.git
-</code></pre><p>获取远程仓库的最新状态</p>
-<pre><code>$ git pull
-</code></pre><p>创建新分支Hexo并切换</p>
-<pre><code>$ git checkout -b Hexo
-</code></pre><p>将新分支推送到远程。</p>
-<pre><code>$ git push origin Hexo
-</code></pre><p>在gitHub主页选择Hexo为默认分支。因为源文件的提交需要手动管理。master分之下只需要通过Hexo部署静态文件即可。</p>
-<p>在Hexo分支下执行一下指令，将源文件提交到Hexo分支。</p>
-<pre><code>$ git pull
-$ git status
-$ git add ******
-$ git commit -m &quot;Here is comments.&quot;
-$ git push origin Hexo
-</code></pre><p>需要重新部署博客时，只需要在Hexo分支下执行</p>
-<pre><code>$ hexo clean
-$ hexo g
-$ hexo d
-</code></pre><p>通过以上步骤，即可以利用master分支管理部署博客的静态资源。利用Hexo分支来更新源文件啦。其实只有Hexo分支需要手动管理。msater分支只是记录了Hexo的操作而已。So easy！<br>不过身边有个大神不喜欢非要部署，自己写了一个工具做静态发布。有时间再研究一下。</p>
-<p>好啦，下次换电脑的时候，只需要clone下自己github.io的项目来，<br>在Hexo分支上就可以拿到所有的源文件啦。<br>然后安装Hexo， 安装依赖，安装部署插件，就可以继续发布新博客啦！<br>妈妈再也不用担心你的博客都被一键清理咯<del>~</del>~！</p>
-<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>后来觉得， 既然这是两个永远不需要merge的分支。干脆还是分开两个项目管理好了。所以下午打算重新来一遍啦~~~！</p>
+</code></pre><p>至此，可通过yourProjectName.github.io访问博客。Hexo搭建个人博客已经完成。</p>
+<h3 id="二、备份博客到github"><a href="#二、备份博客到github" class="headerlink" title="二、备份博客到github"></a>二、备份博客到github</h3><p>Hexo部署在[ccflower.github.io]项目中，是已经编译过的项目文件。而博客的源文件，包括文档，图片，配置，甚至主题，需要自己新建项目备份。博主折腾过在同一个项目中通过不同的分支来管理源文件和部署文件，后来觉得有点混乱，目前也采取额外新建一个项目<a href="https://github.com/ccflower/blogBackup" target="_blank" rel="external">blogBackup</a>存放博客源文件。</p>
+<h3 id="三、主题配置"><a href="#三、主题配置" class="headerlink" title="三、主题配置"></a>三、主题配置</h3><p>目前博主采用<a href="litten.me">litten</a>开发的<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a>主题。具体主题如何配置改动后面再陆续补充。</p>
+<h3 id="四、配置个人域名"><a href="#四、配置个人域名" class="headerlink" title="四、配置个人域名"></a>四、配置个人域名</h3><p>对大部分人来说，ccflower.github.io这样一个域名指向自己的博客地址已经足够用了。博主因为不了解域名的配置，花4RMB买了一个<a href="ccflower.space">ccflower.space</a>的域名指向自己github的博客。时间久了具体步骤已经有点忘记了。下次重新折腾记得来补充。</p>
+<h3 id="五、利用blogBackup备份进行快速二次搭建"><a href="#五、利用blogBackup备份进行快速二次搭建" class="headerlink" title="五、利用blogBackup备份进行快速二次搭建"></a>五、利用blogBackup备份进行快速二次搭建</h3><p>如果换电脑，或者不小心搞残了自己本地的博客配置，这个步骤还是十分有用。</p>
+<h4 id="1-远程克隆项目"><a href="#1-远程克隆项目" class="headerlink" title="1. 远程克隆项目"></a>1. 远程克隆项目</h4><pre><code>git clone https://github.com/ccflower/blogBackup.git
+</code></pre><p>克隆完成后，将.git文件拷贝出来备份。后续hexo init步骤会删除这个文件导致，还不理解原因。</p>
+<h4 id="2-进入项目，安装hexo"><a href="#2-进入项目，安装hexo" class="headerlink" title="2. 进入项目，安装hexo"></a>2. 进入项目，安装hexo</h4><pre><code>npm install hexo --save
+</code></pre><h4 id="3-项目hexo初始化-安装依赖"><a href="#3-项目hexo初始化-安装依赖" class="headerlink" title="3. 项目hexo初始化,安装依赖"></a>3. 项目hexo初始化,安装依赖</h4><pre><code>hexo init
+npm install
+</code></pre><h4 id="4-启动hexo-server，本地测试"><a href="#4-启动hexo-server，本地测试" class="headerlink" title="4.启动hexo server，本地测试"></a>4.启动hexo server，本地测试</h4><pre><code>hexo s
+</code></pre><h4 id="5-修改主题"><a href="#5-修改主题" class="headerlink" title="5.修改主题"></a>5.修改主题</h4><p>拷贝_config.yml和themes文件夹，本地测试主题适用。</p>
+<h4 id="6-将-git文件夹复制回blogBackup"><a href="#6-将-git文件夹复制回blogBackup" class="headerlink" title="6.将.git文件夹复制回blogBackup"></a>6.将.git文件夹复制回blogBackup</h4><h4 id="7-安装Hexo部署插件"><a href="#7-安装Hexo部署插件" class="headerlink" title="7.安装Hexo部署插件"></a>7.安装Hexo部署插件</h4><pre><code>npm install hexo-deployer-git --save
+</code></pre><h4 id="8-重新部署blog"><a href="#8-重新部署blog" class="headerlink" title="8.重新部署blog"></a>8.重新部署blog</h4><pre><code>hexo clean  
+hexo g
+hexo d
+</code></pre><h4 id="9-将改动提交到blogBackup"><a href="#9-将改动提交到blogBackup" class="headerlink" title="9. 将改动提交到blogBackup"></a>9. 将改动提交到blogBackup</h4><pre><code>git status
+git add 
+git commit -m &quot;...&quot;
+git push
+</code></pre><h3 id="六、小结"><a href="#六、小结" class="headerlink" title="六、小结"></a>六、小结</h3><p>使用Hexo搭建blog已经有一年多的时间，反复折腾过不少次。<br>踏过的坑，都是未来的经验。耐心总结梳理，对自己总会有所帮助。</p>
 
       
 
@@ -311,18 +305,18 @@ $ hexo d
   
 <nav id="article-nav">
   
-    <a href="/2017/06/01/46markdownDirections/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/01/45gitDirectives/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          46. 常用MD编辑指令
+          常用Git指令
         
       </div>
     </a>
   
   
-    <a href="/2017/06/01/rex/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">正则表达式</div>
+    <a href="/2017/06/01/46markdownDirections/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用MarkDown编辑指令</div>
       <i class="icon-circle-right"></i>
     </a>
   
