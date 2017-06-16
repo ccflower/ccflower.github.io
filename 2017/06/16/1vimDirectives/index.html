@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ccflower.github.io">
-  <title>ccflower的博客</title>
+  <title>Hexo搭建个人Github Blog | ccflower的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一朵温暖幸福的花儿">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ccflower的博客">
-<meta property="og:url" content="http://ccflower.github.io/index.html">
+  <meta name="description" content="前言Vi和VimVim是Vi的升级版本。兼容Vi的所有指令，添加了一些新特性，比如多级撤销，语法高亮。Vi运行于Unix。Vim可以运行在unix，windows，Mac等多个平台。 目前Mac 10.12.3自带的Vim版本为7.4。如果想继续升级，参考 https://www.zhihu.com/question/34113076 Vi的三个模式及其转换">
+<meta name="keywords" content="tech">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo搭建个人Github Blog">
+<meta property="og:url" content="http://ccflower.github.io/2017/06/16/1vimDirectives/index.html">
 <meta property="og:site_name" content="ccflower的博客">
-<meta property="og:description" content="一朵温暖幸福的花儿">
+<meta property="og:description" content="前言Vi和VimVim是Vi的升级版本。兼容Vi的所有指令，添加了一些新特性，比如多级撤销，语法高亮。Vi运行于Unix。Vim可以运行在unix，windows，Mac等多个平台。 目前Mac 10.12.3自带的Vim版本为7.4。如果想继续升级，参考 https://www.zhihu.com/question/34113076 Vi的三个模式及其转换">
+<meta property="og:updated_time" content="2017-06-16T05:52:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ccflower的博客">
-<meta name="twitter:description" content="一朵温暖幸福的花儿">
+<meta name="twitter:title" content="Hexo搭建个人Github Blog">
+<meta name="twitter:description" content="前言Vi和VimVim是Vi的升级版本。兼容Vi的所有指令，添加了一些新特性，比如多级撤销，语法高亮。Vi运行于Unix。Vim可以运行在unix，windows，Mac等多个平台。 目前Mac 10.12.3自带的Vim版本为7.4。如果想继续升级，参考 https://www.zhihu.com/question/34113076 Vi的三个模式及其转换">
   
     <link rel="alternative" href="/atom.xml" title="ccflower的博客" type="application/atom+xml">
   
@@ -144,16 +146,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-1vimDirectives" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-1vimDirectives" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/16/1vimDirectives/">Hexo搭建个人Github Blog</a>
+    <h1 class="article-title" itemprop="name">
+      Hexo搭建个人Github Blog
     </h1>
   
 
@@ -169,7 +169,92 @@
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Vi和Vim<br>Vim是Vi的升级版本。兼容Vi的所有指令，添加了一些新特性，比如多级撤销，语法高亮。<br>Vi运行于Unix。Vim可以运行在unix，windows，Mac等多个平台。</p>
 <p>目前Mac 10.12.3自带的Vim版本为7.4。如果想继续升级，参考 <a href="https://www.zhihu.com/question/34113076" target="_blank" rel="external">https://www.zhihu.com/question/34113076</a></p>
 <p>Vi的三个模式及其转换</p>
-        
+<a id="more"></a>
+<p>常用指令集<br>（1）一般模式常用操作</p>
+<p>【h(或向左方向键)】 光标左移一个字符</p>
+<p>【j(或向下方向键)】 光标下移一个字符</p>
+<p>【k(或向上方向键)】 光标上移一个字符</p>
+<p>【l(或向右方向键)】 光标右移一个字符<br>【[Ctrl] + f】 屏幕向下移动一页（相当于Page Down键）</p>
+<p>【[Ctrl] + b】 屏幕向上移动一页（相当于Page Up键）<br>【[0]或[Home]】 光标移动到当前行的最前面</p>
+<p>【[$]或[End]】 光标移动到当前行的末尾<br>【G】 光标移动到文件的最后一行（第一个字符处）</p>
+<p>【nG】 n为数字（下同），移动到当前文件中第n行</p>
+<p>【gg】 移动到文件的第一行，相当于”1G”</p>
+<p>【n[Enter]】 光标向下移动n行<br>【/word】 在文件中查找内容为word的字符串（向下查找）</p>
+<p>【?word】 在文件中查找内容为word的字符串（向上查找）</p>
+<p>【[n]】 表示重复查找动作，即查找下一个</p>
+<p>【[N]】 反向查找下一个</p>
+<p>【:n1,n2s/word1/word2/g】 n1、n2为数字，在第n1行到第n2行之间查找word1字符串，并将其替换成word2</p>
+<p>【:1,$s/word1/word2/g】 从第一行（第n行同理）到最后一行查找word1注册，并将其替换成word2</p>
+<p>【:1,$s/word1/word2/gc】 功能同上，只不过每次替换时都会让用户确认<br>【x,X】 x为向后删除一个字符，相当于[Delete]，X为向前删除一个字符，相当于[Backspace]</p>
+<p>【dd】 删除光标所在的一整行</p>
+<p>【ndd】 删除光标所在的向下n行<br>【yy】 复制光标所在的那一行</p>
+<p>【nyy】 复制光标所在的向下n行</p>
+<p>【p,P】 p为将已经复制的数据在光标下一行粘贴；P为将已经复制的数据在光标上一行粘贴<br>【u】 撤消上一个操作</p>
+<p>【[Ctrl] + r】 多次撤消</p>
+<p>【.】 这是小数点键，重复上一个操作<br>（2）一般模式切换到编辑模式的操作</p>
+<p>１、进入插入模式（６个命令）</p>
+<p>【i】 从目前光标所在处插入</p>
+<p>【I】 从目前光标</p>
+<p>【a】 从当前光标所在的下一个字符处开始插入</p>
+<p>【A】 从光标所在行的最后一个字符处开始插入</p>
+<p>【o】 英文小写字母o，在目前光标所在行的下一行处插入新的一行并开始插入</p>
+<p>【O】 英文大写字母O，在目前光标所在行的上一行处插入新的一行并开始插入</p>
+<p>2、进入替换模式（2个命令）</p>
+<p>【r】 只会替换光标所在的那一个字符一次</p>
+<p>【R】 会一直替换光标所在字符，直到按下[ESC]键为止</p>
+<p>【[ESC]】 退出编辑模式回到一般模式<br>（3）一般模式切换到命令行模式</p>
+<p>【:w】 保存文件</p>
+<p>【:w!】 若文件为只读，强制保存文件</p>
+<p>【:q】 离开vi</p>
+<p>【:q!】 不保存强制离开vi</p>
+<p>【:wq】 保存后离开</p>
+<p>【:wq!】 强制保存后离开</p>
+<p>【:! command】 暂时离开vi到命令行下执行一个命令后的显示结果</p>
+<p>【:set nu】 显示行号</p>
+<p>【:set nonu】 取消显示行号</p>
+<p>【:w newfile】 另存为<br>（4）文件恢复模式</p>
+<p>【[O]pen Read-Only】 以只读方式打开文件</p>
+<p>【[E]dit anyway】 用正常方式打开文件，不会载入暂存文件内容</p>
+<p>【[R]ecover】 加载暂存文件内容</p>
+<p>【[D]elete it】 用正常方式打开文件并删除暂存文件</p>
+<p>【[Q]uit】 按下q就离开vi，不进行其他操作</p>
+<p>【[A]bort】 与quit功能类似<br>（5）块选择（一般模式下用）</p>
+<p>【v,V】 v:将光标经过的地方反白选择；V：将光标经过的行反白选择</p>
+<p>【[Ctrl] + v】 块选择，可用长方形的方式选择文本</p>
+<p>【y】 将反白的地方复制到剪贴板</p>
+<p>【d】 将反白的内容删除<br>（6）多文件编辑</p>
+<p>【vim file1 file2】 同时打开两个文件</p>
+<p>【:n】 编辑下一个文件</p>
+<p>【:N】 编辑上一个文件</p>
+<p>【:files】 列出当前用vim打开的所有文件<br>（7）多窗口功能</p>
+<p>【:sp [filename]】 打开一个新窗口，显示新文件，若只输入:sp，则两窗口显示同一个文件</p>
+<p>【[Ctrl] + w + j】 光标移动到下方窗口</p>
+<p>【[Ctrl] + w + k】 光标移动到上方窗口</p>
+<p>【[Ctrl] + w + q】 离开当前窗口<br>（8）vim配置文件</p>
+<p>vim的配置文件为/etc/vimrc，但一般不建议直接修改这个文件，而是在用户根目录下创建一个新的隐藏文件：</p>
+<p>vim ~/.vimrc</p>
+<p>然后编辑这个文件，常用的配置如下：</p>
+<p>“双引号后面的内容为注释</p>
+<p>set nu “显示行号</p>
+<p>set hlsearch “查找的字符串反白显示</p>
+<p>set backspace=2 “可随时用退格键进行删除</p>
+<p>set autoindent “自动缩排</p>
+<p>set ruler “在最下方一行显示状态</p>
+<p>set showmode “在左下角显示模式</p>
+<p>set bg=dark “显示不同的底色，还可以为light</p>
+<p>syntax on “语法检验，颜色显示<br>（9）Dos与Linux的断行字符（文件转化）</p>
+<p>dos2unix [-kn] file [newfile]</p>
+<p>unix2dos [-kn] file [newfile]</p>
+<p>-k:保留该文件原本的mtime时间格式</p>
+<p>-n:保留原本旧文件，将转换后的内容输出到新文件<br>（10）语系编码转化</p>
+<p>iconv –list 列出iconv支持的语系编码</p>
+<p>iconv -f 原本编码 -t 新编码 filename [-o new file]</p>
+<p>-f:from,后接原本的编码格式</p>
+<p>-t:to,后接新编码格式</p>
+<p>-o file:可选参数，建立新文件</p>
+<p>例：将/tmp/a.txt从big5编码格式转换成utf8编码格式：</p>
+<p>iconv -f big5 -t utf8 /tmp/a.txt -o new.txt<br>参考链接：<a href="http://www.cnblogs.com/jiayongji/p/5771444.html" target="_blank" rel="external">http://www.cnblogs.com/jiayongji/p/5771444.html</a><br>                  <a href="http://www.vim.org/" target="_blank" rel="external">http://www.vim.org/</a></p>
+
       
 
       
@@ -191,18 +276,74 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/16/1vimDirectives/">more >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://ccflower.github.io/2017/06/16/1vimDirectives/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/01/hexoBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo搭建个人Github Blog</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -210,71 +351,10 @@
 
 
   
-    <article id="post-hexoBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/hexoBlog/">Hexo搭建个人Github Blog</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/06/01/hexoBlog/" class="archive-article-date">
-  	<time datetime="2017-06-01T02:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。</p>
-<p>  本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。</p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。<br>主要参照物是<a href="http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more" target="_blank" rel="external">涛哥的博客</a>。涛哥的博客写的简明清晰，欢迎大家关注。</p>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tech</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/01/hexoBlog/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -296,8 +376,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
