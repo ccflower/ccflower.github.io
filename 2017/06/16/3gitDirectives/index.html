@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ccflower.github.io">
-  <title>ccflower的博客</title>
+  <title>常用Git指令 | ccflower的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一朵温暖幸福的花儿">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ccflower的博客">
-<meta property="og:url" content="http://ccflower.github.io/index.html">
+  <meta name="description" content="前言十八摸代码管理工具使用的是内部产品RTC（Rational Team Concert）。同时也有自己的gitlab仓库。我们项目某一套组件依赖源码是通过git进行管理的。同时个人开发中也是git使用较多。 git，github与gitlabgit是一个分布式版本控制系统。跟早期的SVN，CVS等集中式版本控制系统相比，分布式版本系统将整个仓库下载到客户端，每个客户端作为一个独立的仓库运行工作。">
+<meta name="keywords" content="tech">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用Git指令">
+<meta property="og:url" content="http://ccflower.github.io/2017/06/16/3gitDirectives/index.html">
 <meta property="og:site_name" content="ccflower的博客">
-<meta property="og:description" content="一朵温暖幸福的花儿">
+<meta property="og:description" content="前言十八摸代码管理工具使用的是内部产品RTC（Rational Team Concert）。同时也有自己的gitlab仓库。我们项目某一套组件依赖源码是通过git进行管理的。同时个人开发中也是git使用较多。 git，github与gitlabgit是一个分布式版本控制系统。跟早期的SVN，CVS等集中式版本控制系统相比，分布式版本系统将整个仓库下载到客户端，每个客户端作为一个独立的仓库运行工作。">
+<meta property="og:image" content="http://ccflower.github.io/assets/blogImg/45/1.jpg">
+<meta property="og:image" content="http://ccflower.github.io/assets/blogImg/45/2.jpg">
+<meta property="og:updated_time" content="2017-06-16T07:10:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ccflower的博客">
-<meta name="twitter:description" content="一朵温暖幸福的花儿">
+<meta name="twitter:title" content="常用Git指令">
+<meta name="twitter:description" content="前言十八摸代码管理工具使用的是内部产品RTC（Rational Team Concert）。同时也有自己的gitlab仓库。我们项目某一套组件依赖源码是通过git进行管理的。同时个人开发中也是git使用较多。 git，github与gitlabgit是一个分布式版本控制系统。跟早期的SVN，CVS等集中式版本控制系统相比，分布式版本系统将整个仓库下载到客户端，每个客户端作为一个独立的仓库运行工作。">
+<meta name="twitter:image" content="http://ccflower.github.io/assets/blogImg/45/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="ccflower的博客" type="application/atom+xml">
   
@@ -144,16 +149,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-3gitDirectives" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-3gitDirectives" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/16/3gitDirectives/">常用Git指令</a>
+    <h1 class="article-title" itemprop="name">
+      常用Git指令
     </h1>
   
 
@@ -169,7 +172,63 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>十八摸代码管理工具使用的是内部产品RTC（Rational Team Concert）。同时也有自己的gitlab仓库。我们项目某一套组件依赖源码是通过git进行管理的。同时个人开发中也是git使用较多。</p>
 <h2 id="git，github与gitlab"><a href="#git，github与gitlab" class="headerlink" title="git，github与gitlab"></a>git，github与gitlab</h2><p>git是一个分布式版本控制系统。<br>跟早期的SVN，CVS等集中式版本控制系统相比，分布式版本系统将整个仓库下载到客户端，每个客户端作为一个独立的仓库运行工作。</p>
 <p>github与gitlab是在线的基于Git的代码托管服务。便于团队存储，分享，发布，测试。</p>
-        
+<a id="more"></a>
+<p>github免费账户只能创建公开代码仓库。是目前最火的开源社区平台。</p>
+<p>gitlab可以创建免费的私人账户。同时可以设置不同的分组，用户权限等。</p>
+<h2 id="在Mac-OS-X上安装Git"><a href="#在Mac-OS-X上安装Git" class="headerlink" title="在Mac OS X上安装Git"></a>在Mac OS X上安装Git</h2><p>直接从AppStore安装Xcode，Xcode集成了Git，不过默认没有安装，你需要运行Xcode，选择菜单“Xcode”-&gt;“Preferences”，在弹出窗口中找到“Downloads”，选择“Command Line Tools”，点“Install”就可以完成安装了。</p>
+<h2 id="设置committer"><a href="#设置committer" class="headerlink" title="设置committer"></a>设置committer</h2><pre><code>$ git config --global user.name &quot;Your Name&quot;
+$ git config --global user.email &quot;email@example.com&quot;
+</code></pre><h2 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><pre><code>$ git init
+</code></pre><h3 id="创建SSH-Key"><a href="#创建SSH-Key" class="headerlink" title="创建SSH Key"></a>创建SSH Key</h3><pre><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+</code></pre><h3 id="克隆远程仓库"><a href="#克隆远程仓库" class="headerlink" title="克隆远程仓库"></a>克隆远程仓库</h3><pre><code>$ git clone [repository url]
+</code></pre><h3 id="本地与远程仓库关联"><a href="#本地与远程仓库关联" class="headerlink" title="本地与远程仓库关联"></a>本地与远程仓库关联</h3><pre><code>$ git remote add origin [git@github.com:ccflower/cotton.git]
+</code></pre><h3 id="添加文件-提交到远程"><a href="#添加文件-提交到远程" class="headerlink" title="添加文件 提交到远程"></a>添加文件 提交到远程</h3><pre><code>$ git add [fileName]
+$ git commit -m &quot;commit descritption&quot;
+$ git push origin master
+</code></pre><h3 id="查看当前状态"><a href="#查看当前状态" class="headerlink" title="查看当前状态"></a>查看当前状态</h3><pre><code>$ git status
+</code></pre><h3 id="查看修改内容"><a href="#查看修改内容" class="headerlink" title="查看修改内容"></a>查看修改内容</h3><pre><code>$ git diff [fileName]
+</code></pre><h3 id="查看commit-log"><a href="#查看commit-log" class="headerlink" title="查看commit log"></a>查看commit log</h3><pre><code>$ git log
+$ git log --pretty=oneline --abbrev-commit
+</code></pre><h3 id="查看命令历史"><a href="#查看命令历史" class="headerlink" title="查看命令历史"></a>查看命令历史</h3><pre><code>$ git reflog
+</code></pre><h3 id="恢复到某个版本"><a href="#恢复到某个版本" class="headerlink" title="恢复到某个版本"></a>恢复到某个版本</h3><pre><code>$ git reset --hard [commit_id]
+</code></pre><h3 id="恢复到上个版本（适用于git-commit-之后的文件）"><a href="#恢复到上个版本（适用于git-commit-之后的文件）" class="headerlink" title="恢复到上个版本（适用于git commit 之后的文件）"></a>恢复到上个版本（适用于git commit 之后的文件）</h3><pre><code>$ git reset --hard HEAD^
+</code></pre><h3 id="查看工作区和最新版本区别"><a href="#查看工作区和最新版本区别" class="headerlink" title="查看工作区和最新版本区别"></a>查看工作区和最新版本区别</h3><p>注意：HEAD为本地版本库最新版本。</p>
+<pre><code>$ git diff HEAD -- [fileName]
+</code></pre><h3 id="丢弃工作区修改（适用于git-add-之前的文件）"><a href="#丢弃工作区修改（适用于git-add-之前的文件）" class="headerlink" title="丢弃工作区修改（适用于git add 之前的文件）"></a>丢弃工作区修改（适用于git add 之前的文件）</h3><pre><code>$ git checkout -- [fileName]
+</code></pre><h3 id="撤销暂存区修改，放回工作区（适用于git-add-之后的文件）"><a href="#撤销暂存区修改，放回工作区（适用于git-add-之后的文件）" class="headerlink" title="撤销暂存区修改，放回工作区（适用于git add 之后的文件）"></a>撤销暂存区修改，放回工作区（适用于git add 之后的文件）</h3><pre><code>$ git reset HEAD [fileName]
+</code></pre><p>理解工作区，暂存区和本地仓库的关系<br><img src="/assets/blogImg/45/1.jpg" alt="alt text" title="理解工作区，暂存区和本地仓库的关系"></p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><pre><code>$ git rm [fileName]
+</code></pre><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h3><pre><code>$ git tag [tagName] [commitID]
+</code></pre><h3 id="查看所有标签"><a href="#查看所有标签" class="headerlink" title="查看所有标签"></a>查看所有标签</h3><pre><code>$ git tag
+</code></pre><h3 id="指定标签信息"><a href="#指定标签信息" class="headerlink" title="指定标签信息"></a>指定标签信息</h3><pre><code>$ git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;
+</code></pre><h3 id="用PGP签名标签"><a href="#用PGP签名标签" class="headerlink" title="用PGP签名标签"></a>用PGP签名标签</h3><pre><code>$ git tag -s &lt;tagname&gt; -m &quot;blablabla...&quot;
+</code></pre><h3 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h3><pre><code>$ git tag -d v0.1
+</code></pre><h3 id="推送标签到远程"><a href="#推送标签到远程" class="headerlink" title="推送标签到远程"></a>推送标签到远程</h3><pre><code>$ git push origin &lt;tagname&gt;
+</code></pre><h3 id="推送所有标签到远程"><a href="#推送所有标签到远程" class="headerlink" title="推送所有标签到远程"></a>推送所有标签到远程</h3><pre><code>$ git push origin --tags
+</code></pre><h3 id="删除远程标签"><a href="#删除远程标签" class="headerlink" title="删除远程标签"></a>删除远程标签</h3><pre><code>$ git push origin :refs/tags/[tagName]
+</code></pre><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>在GitHub上，可以任意Fork开源仓库；<br>自己拥有Fork后的仓库的读写权限；<br>可以推送pull request给官方仓库来贡献代码。</p>
+<p>理解fork项目和源项目</p>
+<p><img src="/assets/blogImg/45/2.jpg" alt="alt text" title="理解fork项目和源项目"></p>
+<p><code>.gitignore</code>文件可以设置git忽略的文件。</p>
+<p><code>.git/config</code>文件可以配置别名等。</p>
+<pre><code>$ cat .git/config 
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+    ignorecase = true
+    precomposeunicode = true
+[remote &quot;origin&quot;]
+    url = git@github.com:michaelliao/learngit.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;master&quot;]
+    remote = origin
+    merge = refs/heads/master
+[alias]
+    last = log -1
+</code></pre><p>参考文档：<br>SVN到RTC： <a href="http://www.uml.org.cn/pzgl/201204122.asp" target="_blank" rel="external">http://www.uml.org.cn/pzgl/201204122.asp</a><br>Git，Gitlab和Github： <a href="http://blog.csdn.net/carryoner/article/details/51684431" target="_blank" rel="external">http://blog.csdn.net/carryoner/article/details/51684431</a><br>                                     <a href="http://blog.csdn.net/ylgwhyh/article/details/52134338" target="_blank" rel="external">http://blog.csdn.net/ylgwhyh/article/details/52134338</a><br>Git常用指令教程：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></p>
+
       
 
       
@@ -191,18 +250,74 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/16/3gitDirectives/">more >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://ccflower.github.io/2017/06/16/3gitDirectives/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/16/2markdownDirective/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用MarkDown编辑指令</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -210,202 +325,10 @@
 
 
   
-    <article id="post-2markdownDirective" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/16/2markdownDirective/">常用MarkDown编辑指令</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/06/16/2markdownDirective/" class="archive-article-date">
-  	<time datetime="2017-06-16T07:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>MarkDown是一款非常好用的文档编辑器。主要优点在于排版快速。适合写博客等需要一定排版的文字编辑。</p>
-<p>VS Code中自带markdown插件，MD文档编辑预览快捷键为：<code>command+shift+v</code> 或 <code>command + V K</code>(后边快捷键一直不知道怎么按啊！！)。</p>
-<h2 id="自定义配置MD预览样式"><a href="#自定义配置MD预览样式" class="headerlink" title="自定义配置MD预览样式"></a>自定义配置MD预览样式</h2><blockquote>
-<p>vscode 菜单 文件-&gt;首选项-&gt;用户设置 </p>
-<p>在打开的 settings.json 文件中添加：<br>{<br>    “markdown.styles”: [ “file:///c:/my-md.css” ]<br>}</p>
-</blockquote>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tech</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/16/2markdownDirective/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-1vimDirectives" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/16/1vimDirectives/">常用Vi编辑模式及指令</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/16/1vimDirectives/" class="archive-article-date">
-  	<time datetime="2017-06-16T05:44:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Vi和Vim<br>Vim是Vi的升级版本。兼容Vi的所有指令，添加了一些新特性，比如多级撤销，语法高亮。<br>Vi运行于Unix。Vim可以运行在unix，windows，Mac等多个平台。</p>
-<p>目前Mac 10.12.3自带的Vim版本为7.4。如果想继续升级，参考 <a href="https://www.zhihu.com/question/34113076" target="_blank" rel="external">https://www.zhihu.com/question/34113076</a></p>
-<p>Vi的三个模式及其转换</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tech</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/16/1vimDirectives/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hexoBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/hexoBlog/">Hexo搭建个人Github Blog</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/01/hexoBlog/" class="archive-article-date">
-  	<time datetime="2017-06-01T02:57:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>  好久没写过认真构思的文章， 想要记录一下遇到的问题居然都有点无从入手。第一篇，有点乱。</p>
-<p>  本文主要介绍初次利用HEXO搭建个人github博客的流程，以及在github备份博客后的二次快速搭建。</p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>开始玩gitblog的时候参看网上众多教程部署好了自己的博客。大概是十月初的时候。<br>主要参照物是<a href="http://todd2010.github.io/2016/05/18/005-Hexo-GitHub/#more" target="_blank" rel="external">涛哥的博客</a>。涛哥的博客写的简明清晰，欢迎大家关注。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tech</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/01/hexoBlog/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -427,8 +350,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
