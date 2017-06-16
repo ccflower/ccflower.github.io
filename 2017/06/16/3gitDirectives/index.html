@@ -15,13 +15,13 @@
 <meta property="og:url" content="http://ccflower.github.io/2017/06/16/3gitDirectives/index.html">
 <meta property="og:site_name" content="ccflower的博客">
 <meta property="og:description" content="前言十八摸代码管理工具使用的是内部产品RTC（Rational Team Concert）。同时也有自己的gitlab仓库。我们项目某一套组件依赖源码是通过git进行管理的。同时个人开发中也是git使用较多。 git，github与gitlabgit是一个分布式版本控制系统。跟早期的SVN，CVS等集中式版本控制系统相比，分布式版本系统将整个仓库下载到客户端，每个客户端作为一个独立的仓库运行工作。">
-<meta property="og:image" content="http://ccflower.github.io/assets/blogImg/45/1.jpg">
-<meta property="og:image" content="http://ccflower.github.io/assets/blogImg/45/2.jpg">
-<meta property="og:updated_time" content="2017-06-16T07:10:06.000Z">
+<meta property="og:image" content="http://ccflower.github.io/assets/blogImg/1/1.jpg">
+<meta property="og:image" content="http://ccflower.github.io/assets/blogImg/1/2.jpg">
+<meta property="og:updated_time" content="2017-06-16T07:19:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用Git指令">
 <meta name="twitter:description" content="前言十八摸代码管理工具使用的是内部产品RTC（Rational Team Concert）。同时也有自己的gitlab仓库。我们项目某一套组件依赖源码是通过git进行管理的。同时个人开发中也是git使用较多。 git，github与gitlabgit是一个分布式版本控制系统。跟早期的SVN，CVS等集中式版本控制系统相比，分布式版本系统将整个仓库下载到客户端，每个客户端作为一个独立的仓库运行工作。">
-<meta name="twitter:image" content="http://ccflower.github.io/assets/blogImg/45/1.jpg">
+<meta name="twitter:image" content="http://ccflower.github.io/assets/blogImg/1/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="ccflower的博客" type="application/atom+xml">
   
@@ -196,7 +196,7 @@ $ git log --pretty=oneline --abbrev-commit
 <pre><code>$ git diff HEAD -- [fileName]
 </code></pre><h3 id="丢弃工作区修改（适用于git-add-之前的文件）"><a href="#丢弃工作区修改（适用于git-add-之前的文件）" class="headerlink" title="丢弃工作区修改（适用于git add 之前的文件）"></a>丢弃工作区修改（适用于git add 之前的文件）</h3><pre><code>$ git checkout -- [fileName]
 </code></pre><h3 id="撤销暂存区修改，放回工作区（适用于git-add-之后的文件）"><a href="#撤销暂存区修改，放回工作区（适用于git-add-之后的文件）" class="headerlink" title="撤销暂存区修改，放回工作区（适用于git add 之后的文件）"></a>撤销暂存区修改，放回工作区（适用于git add 之后的文件）</h3><pre><code>$ git reset HEAD [fileName]
-</code></pre><p>理解工作区，暂存区和本地仓库的关系<br><img src="/assets/blogImg/45/1.jpg" alt="alt text" title="理解工作区，暂存区和本地仓库的关系"></p>
+</code></pre><p>理解工作区，暂存区和本地仓库的关系<br><img src="/assets/blogImg/1/1.jpg" alt="alt text" title="理解工作区，暂存区和本地仓库的关系"></p>
 <h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><pre><code>$ git rm [fileName]
 </code></pre><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h3><pre><code>$ git tag [tagName] [commitID]
 </code></pre><h3 id="查看所有标签"><a href="#查看所有标签" class="headerlink" title="查看所有标签"></a>查看所有标签</h3><pre><code>$ git tag
@@ -208,7 +208,7 @@ $ git log --pretty=oneline --abbrev-commit
 </code></pre><h3 id="删除远程标签"><a href="#删除远程标签" class="headerlink" title="删除远程标签"></a>删除远程标签</h3><pre><code>$ git push origin :refs/tags/[tagName]
 </code></pre><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>在GitHub上，可以任意Fork开源仓库；<br>自己拥有Fork后的仓库的读写权限；<br>可以推送pull request给官方仓库来贡献代码。</p>
 <p>理解fork项目和源项目</p>
-<p><img src="/assets/blogImg/45/2.jpg" alt="alt text" title="理解fork项目和源项目"></p>
+<p><img src="/assets/blogImg/1/2.jpg" alt="alt text" title="理解fork项目和源项目"></p>
 <p><code>.gitignore</code>文件可以设置git忽略的文件。</p>
 <p><code>.git/config</code>文件可以配置别名等。</p>
 <pre><code>$ cat .git/config 
